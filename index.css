@@ -42,6 +42,10 @@ p {
     max-width: 534px;
 }
 
+.profile-section {
+    min-height: 80vh;
+}
+
 .dog-card {
     display: grid;
     grid-template-rows: 4fr 1fr 1fr 1fr;
