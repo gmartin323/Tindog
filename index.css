@@ -1,0 +1,174 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* outline: solid red; */
+} 
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* ----- FLEXBOX CONTAINERS ----- */
+
+.nav, .btn-section {
+    display: flex;   
+}
+
+/* ----- NAVIGATION ----- */
+
+.nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em 0;    
+}
+
+/* ----- LAYOUT ----- */
+
+.container {
+    width: 97%;
+    margin: 0 auto;
+    max-width: 534px;
+}
+
+.dog-card {
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr 1fr;
+    animation: fadeVisibility 0.6s;
+}
+
+.dog-img {
+    grid-row: 1/ -1;
+    grid-column: 1/ -1;
+}
+
+.badge {
+    grid-row: 1;
+    grid-column: 1/ -1;
+    max-width: 50vw;
+    transform: rotate(-30deg) translate(-6%, 43%);
+}
+
+.dog-info {
+    grid-row: 3;
+    grid-column: 1/ -1;
+    color: #F8F8F8;
+}
+
+.dog-bio {
+    grid-row: 4;
+    grid-column: 1/ -1;
+    color: #B7B7B7;
+}
+
+.dog-info,
+.dog-bio {
+    margin: auto 4%;
+} 
+
+.btn-section {
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.end-message {
+    font-size: 1.5rem;
+    color: #B7B7B7;
+    padding: 3em 1em;
+    text-align: center;
+}
+
+
+/* ----- IMAGES ----- */
+
+img {
+    object-fit: contain;
+}
+
+.nav-img {
+    max-height: 1.6rem;
+}
+
+.logo {
+    max-height: 1.95rem;
+}
+
+.dog-img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.btn {
+    box-shadow: 0px 10px 20px #E9E9EA;
+    padding: 1rem;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+#like-btn:hover, 
+#like-btn:active,
+#like-btn:focus {
+    background-color: #DBFFF4;
+}
+
+#dislike-btn:hover, 
+#dislike-btn:active,
+#dislike-btn:focus {
+    background-color: #FFE7EF;
+}
+
+/* ----- UTILITY ----- */
+
+.hidden {
+    display: none;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media(min-width: 400px) {
+    .nav-img {
+        max-height: 2.125rem;
+    }
+    
+    .logo {
+        max-height: 2.625rem;
+    }
+    
+    .dog-info {
+        font-size: 2.5rem;
+    }
+    
+    .dog-bio {
+        font-size: 2rem;
+    }
+    
+    .dog-card {
+        display: grid;
+        grid-template-rows: 4fr 1fr 1fr 1fr;
+    }
+}
+
+/* ----- ANIMATION ----- */
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
